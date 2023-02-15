@@ -26,7 +26,7 @@
         echo "Success<br />";
     }
 
-    $result = $db_conn->query("SELECT * FROM menuItems;");
+    $result = $db_conn->query("SELECT * FROM customer;");
 
     if (!$result) {
         echo "error on query<br/>";
@@ -37,9 +37,6 @@
 
     while ($row = $result->fetch_assoc()) {
         print_r($row);
-        echo "<br />";
-        $item = $row['description'];
-        echo $item;
         echo "<br />";
     }
         ?>
