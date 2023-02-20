@@ -14,9 +14,9 @@
     echo "<p>Start of php</p>";
 
     $servername = "localhost";
-    $username = "steverq1_dev";
-    $password = "Csci213+#006";
-    $dbname = "steverq1_devdb";
+    $username = "steverq1_chad";
+    $password = "Csci213+#003";
+    $dbname = "steverq1_chad";
 
     $db_conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -26,7 +26,7 @@
         echo "Success<br />";
     }
 
-    $result = $db_conn->query("SELECT * FROM cmer;");
+    $result = $db_conn->query("SELECT * FROM customer;");
 
     if (!$result) {
         echo "error on query<br/>";
