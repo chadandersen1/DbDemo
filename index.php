@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<h2>DB Connections</h2>
     <?php
 
     echo "<p>Start of php</p>";
@@ -28,16 +27,13 @@
 
     $result = $db_conn->query("SELECT * FROM customer;");
 
-    if (!$result) {
-        echo "error on query<br/>";
-    }
-    else{
-        echo "Query good!<br/>";
-    }
-
+    echo "<table><tr><th>Customer ID</th><th>Customer first name</th><th>Customer last name</th><th>Customer Email</th></tr>";
     while ($row = $result->fetch_assoc()) {
-        print_r($row);
-        echo "<br />";
+        $cust_id = $row['cust_id'];
+        $cust_fname = $row['cust_fname'];
+        $cust_lname = $row['cust_lname'];
+        $cust_email = $row['cust_email'];
+        echo "<tr><td>$cust_id</td><td>$cust_fname</td><td>$cust_lname</td><td>$cust_email</td></tr>";
     }
         ?>
         
